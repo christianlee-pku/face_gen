@@ -6,7 +6,10 @@ import argparse
 import os
 import numpy as np
 
-# Register modules
+import src.datasets.celeba
+import src.models.generator
+import src.models.discriminator
+import src.models.losses
 
 def evaluate(config_path, checkpoint_path):
     """

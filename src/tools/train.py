@@ -7,9 +7,12 @@ from src.core.registry import DATASETS, MODELS, PIPELINES
 from src.core.config import Config
 from src.core.logging import get_logger
 import mlflow
-import numpy as np # Added for evaluate()
+import numpy as np
 
-# Register modules
+import src.datasets.celeba
+import src.models.generator
+import src.models.discriminator
+import src.models.losses
 
 class Trainer:
     """

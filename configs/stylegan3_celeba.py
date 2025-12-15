@@ -3,7 +3,7 @@
 
 # --- Experiment Settings ---
 work_dir = "work_dirs/stylegan3_celeba"
-total_epochs = 5  # Train for 5 epochs
+total_epochs = 3  # Train for 3 epochs
 batch_size = 8
 num_workers = 4
 lr = 0.002
@@ -52,5 +52,4 @@ train_pipeline = [
 ]
 
 # --- Resume / Fine-tune ---
-resume_from = "work_dirs/stylegan3_celeba/epoch_3.pth" # Optional
-# load_from = "pretrained_models/stylegan3-r-ffhq-1024x1024.pkl" # Optional
+# resume_from = "work_dirs/stylegan3_celeba/epoch_3.pth" # Optional

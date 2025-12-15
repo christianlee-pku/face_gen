@@ -10,7 +10,7 @@ set -e
 
 # Configuration
 CONFIG_PATH="configs/stylegan3_celeba.py"
-CHECKPOINT_PATH="work_dirs/stylegan3_celeba/epoch_5.pth"
+CHECKPOINT_PATH="./work_dirs/stylegan3_celeba/epoch_3.pth"
 SEEDS="42,100,2023"
 TRUNCATION_PSI=0.7
 OUTDIR="work_dirs/inference_output"

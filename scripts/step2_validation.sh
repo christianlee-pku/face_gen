@@ -9,7 +9,7 @@ set -e
 
 # Configuration
 CONFIG_PATH="configs/stylegan3_celeba.py"
-CHECKPOINT_PATH="work_dirs/stylegan3_celeba/epoch_5.pth"
+CHECKPOINT_PATH="work_dirs/stylegan3_celeba/epoch_3.pth"
 
 echo "========================================================"
 echo "Starting Validation Pipeline"

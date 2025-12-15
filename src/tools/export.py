@@ -5,6 +5,10 @@ import argparse
 import os
 
 # Register modules
+import src.datasets.celeba
+import src.models.generator
+import src.models.discriminator
+import src.models.losses
 
 def export_onnx(config_path, checkpoint_path, output_path):
     """
@@ -47,7 +51,7 @@ def export_onnx(config_path, checkpoint_path, output_path):
         output_path,
         input_names=['z'],
         output_names=['image'],
-        opset_version=11,
+        opset_version=18,
         # Allow variable batch size
         dynamic_axes={'z': {0: 'batch_size'}, 'image': {0: 'batch_size'}}
     )

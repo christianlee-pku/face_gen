@@ -58,7 +58,7 @@ Unlike standard research repositories, this project emphasizes **MLOps best prac
 
 ## ⚡ Quick Start
 
-### 1. Training (Local)
+### 1. Training
 
 Fine-tune the StyleGAN3 model on the CelebA dataset.
 
