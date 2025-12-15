@@ -9,12 +9,11 @@ dependencies:
   - pytorch
   - torchvision
   - torchaudio
-  - pytorch-cuda=12.1
   - pip
   - pip:
     - fastapi
     - uvicorn
-    - onnxruntime-gpu
+    - onnxruntime
     - boto3
     - mlflow
     - scikit-learn

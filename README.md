@@ -44,7 +44,7 @@ Unlike standard research repositories, this project emphasizes **MLOps best prac
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/yourusername/face-gen-pipeline.git
+    git clone https://github.com/christianlee-pku/face_gen.git
     cd face_gen
     ```
 
@@ -129,7 +129,8 @@ For detailed guides, please refer to the `docs/` directory:
 -   [**Model Export**](docs/pipeline/02_export.md): ONNX conversion details and dynamic axes.
 -   [**Local Serving**](docs/pipeline/03_serving_local.md): API endpoints, authentication, and testing.
 -   [**Cloud Deployment**](docs/pipeline/04_deployment.md): Vertex AI setup, containerization, and auto-scaling.
--   [**Data & Architecture**](docs/pipeline/05_data_celeba.md): CelebA dataset specs and StyleGAN3 architecture.
+-   [**Data Guide**](docs/pipeline/05_data_celeba.md): CelebA dataset structure, partitions, and processing.
+-   [**Model Architecture**](docs/pipeline/06_model_architecture.md): StyleGAN3 Generator/Discriminator and Loss functions.
 
 ---
 
@@ -170,10 +171,6 @@ graph LR
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and request features.
-
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
@@ -181,4 +178,3 @@ This project is licensed under the [MIT License](LICENSE).
 ## 🙏 Acknowledgements
 
 -   [StyleGAN3](https://github.com/NVlabs/stylegan3) by NVlabs.
--   [MMDetection](https://github.com/open-mmlab/mmdetection) for the registry design pattern.
