@@ -1,0 +1,39 @@
+# Use official Python runtime as a parent image
+FROM python:3.10-slim
+
+# Set environment variables
+# PREVENT Python from writing pyc files to disc
+ENV PYTHONDONTWRITEBYTECODE=1
+# PREVENT Python from buffering stdout and stderr
+ENV PYTHONUNBUFFERED=1
+# Set path for SageMaker
+ENV PATH="/opt/program:${PATH}"
+
+# Set working directory
+WORKDIR /opt/program
+
+# Install system dependencies
+# libgomp1 is often needed for PyTorch/ONNX Runtime
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install python dependencies
+COPY requirements/serving.txt .
+RUN pip install --no-cache-dir -r serving.txt
+
+# Copy source code
+COPY src/ ./src/
+
+# Copy the entrypoint script
+COPY src/apis/vertex_entry.py .
+
+# Make sure entrypoint is executable
+RUN chmod +x vertex_entry.py
+
+# Expose the port Vertex AI will use
+EXPOSE 8080
+
+# Define entrypoint
+# Vertex AI will execute this command to start the container
+ENTRYPOINT ["python", "vertex_entry.py"]
